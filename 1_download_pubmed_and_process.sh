@@ -17,9 +17,7 @@
 
 if ! [ -f data/all_medline_post2000.txt ]; then
 	## wget all files from PubMed
-	##test on 10 files
-	#wget ftp://ftp.ncbi.nlm.nih.gov/pubmed/baseline/medline17n087*.xml.gz -P data/raw
-	# everything
+	# as of early 2017, Medline consisted of 892 files
 	wget ftp://ftp.ncbi.nlm.nih.gov/pubmed/baseline/medline17n0*.xml.gz -P data/raw
 	## Unzip all of them
 	gunzip data/raw/*.xml.gz
